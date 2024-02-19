@@ -1,5 +1,3 @@
-use std::f64;
-
 /// Converts celsius to fahrenheit degrees
 ///
 /// # Examples

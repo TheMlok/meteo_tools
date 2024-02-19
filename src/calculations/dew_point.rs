@@ -1,6 +1,5 @@
 use crate::constants::constants::{LATENT_HEAT_OF_VAPORIZATION, STANDARD_CONDENSATION_POINT};
 use crate::fahrenheit_to_celsius;
-use std::f64;
 
 // TODO: add attribute for degree kind
 //       add ability to count in fahrenheits, use crate function to recalculate the temperature
