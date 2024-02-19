@@ -16,4 +16,5 @@ pub mod constants {
         -1.99e-6,
         1.040e-8,
     ];
+    pub const KELVIN_DEGREE_CONSTANT: f64 = 273.15;
 }

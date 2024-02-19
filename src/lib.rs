@@ -1,6 +1,6 @@
 mod calculations;
 mod constants;
-mod conversions;
+pub mod conversions;
 
 // Dew point
 pub use self::calculations::dew_point::celsius_dew_point;
@@ -20,7 +20,11 @@ pub use self::calculations::humidex::fahrenheit_humidex;
 
 // Conversions
 pub use self::conversions::temperature::celsius_to_fahrenheit;
+pub use self::conversions::temperature::celsius_to_kelvin;
 pub use self::conversions::temperature::fahrenheit_to_celsius;
+pub use self::conversions::temperature::fahrenheit_to_kelvin;
+pub use self::conversions::temperature::kelvin_to_celsius;
+pub use self::conversions::temperature::kelvin_to_fahrenheit;
 
 // TODO: conversion to kelvin from c and f and vice versa
 // TODO: mixing ratio, absolute relative_humidity, Specific relative_humidity, Mixing Ratio, Absolute relative_humidity, Vapor pressure, Relative saturation
