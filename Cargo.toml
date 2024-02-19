@@ -1,0 +1,13 @@
+[package]
+name = "meteo_tools"
+version = "0.1.0"
+edition = "2021"
+description = "A crate for counting and converting meteorological units."
+keywords = ["meteo", "celsius", "conversions", "weather", "units"]
+authors = ["Martin Podhola <martin@podhola.com>"]
+license-file = "LICENSE.txt"
+rust-version = "1.75"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
