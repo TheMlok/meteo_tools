@@ -1,5 +1,5 @@
 use crate::constants::constants::ROTHFUSZ_COEFS;
-use crate::{celsius_to_fahrenheit, fahrenheit_to_celsius};
+use crate::{celsius_to_fahrenheit, fahrenheit_to_celsius, meteo_round};
 
 /// Calculates heat index based on Rothfusz regression equation for Fahrenheits.
 ///
@@ -8,7 +8,7 @@ use crate::{celsius_to_fahrenheit, fahrenheit_to_celsius};
 /// ```
 /// let temperature = 72.5;
 /// let relative_humidity = 62.4;
-/// let result = 76.0;
+/// let result = 75.9737;
 ///
 /// let heat_index = meteo_tools::fahrenheit_heat_index(&temperature, &relative_humidity);
 ///
@@ -24,7 +24,7 @@ pub fn fahrenheit_heat_index(temperature: &f64, relative_humidity: &f64) -> f64 
         + ROTHFUSZ_COEFS[6] * temperature.powi(2) * relative_humidity
         + ROTHFUSZ_COEFS[7] * temperature * relative_humidity.powi(2)
         + ROTHFUSZ_COEFS[8] * temperature.powi(2) * relative_humidity.powi(2);
-    heat_index.round()
+    meteo_round(&heat_index)
 }
 
 /// Calculates heat index based on Rothfusz regression equation for Celsius.
@@ -34,7 +34,7 @@ pub fn fahrenheit_heat_index(temperature: &f64, relative_humidity: &f64) -> f64 
 /// ```
 /// let temperature = 22.5;
 /// let relative_humidity = 62.4;
-/// let result = 24.0;
+/// let result = 24.4298;
 ///
 /// let heat_index = meteo_tools::celsius_heat_index(&temperature, &relative_humidity);
 ///
@@ -43,5 +43,6 @@ pub fn fahrenheit_heat_index(temperature: &f64, relative_humidity: &f64) -> f64 
 pub fn celsius_heat_index(temperature: &f64, relative_humidity: &f64) -> f64 {
     let fahrenheit_temperature = celsius_to_fahrenheit(temperature);
     let heat_index = fahrenheit_heat_index(&fahrenheit_temperature, relative_humidity);
-    fahrenheit_to_celsius(&heat_index).round()
+    let fahrenheit_heat_index = fahrenheit_to_celsius(&heat_index);
+    meteo_round(&fahrenheit_heat_index)
 }
