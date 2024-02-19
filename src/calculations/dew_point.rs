@@ -69,3 +69,29 @@ pub fn common_fahrenheit_dew_point(temperature: &f64, humidity: &f64) -> f64 {
     let temperature = fahrenheit_to_celsius(temperature);
     common_celsius_dew_point(&temperature, humidity)
 }
+
+/// Calculates dew point using Magnus-Tetens formula using Fahrenheit with given atmospheric pressure correction in hPa.
+///
+/// # Examples
+///
+/// ```
+/// let temperature = 72.5;
+/// let humidity = 62.4;
+/// let pressure = 1013.25;
+/// let result = 15.0;
+///
+/// let dew_point = meteo_tools::fahrenheit_dew_point(&temperature, &humidity, &pressure);
+///
+/// assert_eq!(dew_point, result);
+/// ```
+pub fn fahrenheit_dew_point(temperature: &f64, humidity: &f64, pressure: &f64) -> f64 {
+    let dew_point = common_fahrenheit_dew_point(&temperature, &humidity);
+    if *pressure != 1013.25 {
+        dew_point
+            / (1.0 - (pressure - 1013.25) / 1013.25 * 0.190284)
+                .abs()
+                .round()
+    } else {
+        dew_point.round()
+    }
+}
