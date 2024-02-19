@@ -1,9 +1,7 @@
-use crate::constants::constants::{LATENT_HEAT_OF_VAPORIZATION, STANDARD_CONDENSATION_POINT};
+use crate::constants::constants::{
+    AVG_ATMOSPHERIC_PRESSURE, LATENT_HEAT_OF_VAPORIZATION, STANDARD_CONDENSATION_POINT,
+};
 use crate::{celsius_to_fahrenheit, fahrenheit_to_celsius, meteo_round};
-
-// TODO: add attribute for degree kind
-//       add ability to count in fahrenheits, use crate function to recalculate the temperature
-//       add ablility to set given atm. pressure
 
 /// Calculates dew point using Magnus-Tetens formula using Celsius with common atmospheric pressure using constant.
 ///
@@ -95,9 +93,12 @@ pub fn fahrenheit_dew_point(
 }
 
 fn calculate_exact_pressure_offset(atmospheric_pressure: &f64, dew_point: &f64) -> f64 {
-    if *atmospheric_pressure != 1013.25 {
-        let dew_point_full =
-            dew_point / (1.0 - (atmospheric_pressure - 1013.25) / 1013.25 * 0.190284).abs();
+    if *atmospheric_pressure != AVG_ATMOSPHERIC_PRESSURE {
+        let dew_point_full = dew_point
+            / (1.0
+                - (atmospheric_pressure - AVG_ATMOSPHERIC_PRESSURE) / AVG_ATMOSPHERIC_PRESSURE
+                    * 0.190284)
+                .abs();
         meteo_round(&dew_point_full)
     } else {
         meteo_round(&dew_point)
