@@ -19,8 +19,10 @@ pub use self::calculations::humidex::common_fahrenheit_humidex;
 pub use self::calculations::humidex::fahrenheit_humidex;
 
 // Mixing ratio
+pub use self::calculations::mixing_ratio::celsius_mixing_ratio;
 pub use self::calculations::mixing_ratio::common_celsius_mixing_ratio;
 pub use self::calculations::mixing_ratio::common_fahrenheit_mixing_ratio;
+pub use self::calculations::mixing_ratio::fahrenheit_mixing_ratio;
 
 // Conversions
 pub use self::conversions::temperature::celsius_to_fahrenheit;
@@ -30,7 +32,7 @@ pub use self::conversions::temperature::fahrenheit_to_kelvin;
 pub use self::conversions::temperature::kelvin_to_celsius;
 pub use self::conversions::temperature::kelvin_to_fahrenheit;
 
-// TODO: Specific relative_humidity, Mixing Ratio, Absolute relative_humidity, Vapor pressure, Relative saturation
+// TODO: Specific relative_humidity, Absolute relative_humidity, Vapor pressure, Relative saturation
 // TODO: heat index variants: Steadman's Apparent Temperature, Australian Apparent Temperature, New Zealand Apparent Temperature
 
 /// Rounds given value to 4 decimal places
