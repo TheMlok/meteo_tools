@@ -37,6 +37,7 @@ pub use self::calculations::mixing_ratio::fahrenheit_mixing_ratio;
 
 // Absolute humidity
 pub use self::calculations::absolute_humidity::celsius_absolute_humidity;
+pub use self::calculations::absolute_humidity::fahrenheit_absolute_humidity;
 
 // Conversions
 pub use self::conversions::temperature::celsius_to_fahrenheit;
@@ -49,6 +50,7 @@ pub use self::conversions::temperature::kelvin_to_fahrenheit;
 // TODO: Specific relative_humidity, Vapor pressure, Relative saturation
 // TODO: heat index variants: Steadman's Apparent Temperature, Australian Apparent Temperature, New Zealand Apparent Temperature
 // TODO: Kelvin to Fahr vice versa
+// TODO: Conversions of pressure values
 
 /// Rounds given value to 4 decimal places
 fn meteo_round(number: &f64) -> f64 {
