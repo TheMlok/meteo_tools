@@ -1,8 +1,5 @@
-use crate::constants::constants::{
-    AVG_ATMOSPHERIC_PRESSURE, HUMIDEX_CONSTANT_OFFSET, LATENT_HEAT_OF_VAPORIZATION,
-    SATURATION_VAPOR_PRESSURE_REFERENCE, STANDARD_CONDENSATION_POINT,
-};
-use crate::{fahrenheit_to_celsius, meteo_round};
+use crate::constants::constants::AVG_ATMOSPHERIC_PRESSURE;
+use crate::{fahrenheit_to_celsius, meteo_round, saturation_vapor_pressure};
 
 // TODO change this AVG_ATMOSPHERIC_PRESSURE with attribute to create other than common
 
@@ -100,14 +97,4 @@ pub fn fahrenheit_mixing_ratio(
         atmospheric_pressure,
     );
     meteo_round(&mixing_ratio)
-}
-
-// Function to calculate saturation vapor pressure using the Magnus-Tetens formula
-fn saturation_vapor_pressure(temperature_celsius: &f64) -> f64 {
-    let saturation_vapor_pressure = SATURATION_VAPOR_PRESSURE_REFERENCE
-        * HUMIDEX_CONSTANT_OFFSET.powf(
-            (LATENT_HEAT_OF_VAPORIZATION * temperature_celsius)
-                / (STANDARD_CONDENSATION_POINT + temperature_celsius),
-        );
-    saturation_vapor_pressure
 }
