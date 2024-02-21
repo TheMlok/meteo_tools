@@ -5,6 +5,8 @@ use crate::{celsius_to_fahrenheit, fahrenheit_to_celsius, meteo_round};
 
 /// Calculates dew point using Magnus-Tetens formula using Celsius with common atmospheric pressure using constant.
 ///
+/// Returns degrees of Celsius
+///
 /// # Examples
 ///
 /// ```
@@ -26,6 +28,8 @@ pub fn common_celsius_dew_point(temperature: &f64, relative_humidity: &f64) -> f
 
 /// Calculates dew point using Magnus-Tetens formula using Celsius with given atmospheric pressure correction in hPa.
 /// Needs atmospheric pressure measurement in hPa in f64.
+///
+/// Returns degrees of Celsius
 ///
 /// # Examples
 ///
@@ -50,6 +54,8 @@ pub fn celsius_dew_point(
 
 /// Calculates common dew point using Magnus-Tetens formula using Fahrenheit with common atmospheric pressure using constant.
 ///
+/// Returns degrees of Fahrenheit
+///
 /// # Examples
 ///
 /// ```
@@ -70,6 +76,8 @@ pub fn common_fahrenheit_dew_point(temperature: &f64, relative_humidity: &f64) -
 
 /// Calculates dew point using Magnus-Tetens formula using Fahrenheit with given atmospheric pressure correction in hPa.
 /// Needs atmospheric pressure measurement in hPa in f64.
+///
+/// Returns degrees of Fahrenheit
 ///
 /// # Examples
 ///
@@ -92,6 +100,7 @@ pub fn fahrenheit_dew_point(
     calculate_exact_pressure_offset(&atmospheric_pressure, &dew_point)
 }
 
+// Calculates offset to correct when exact atmospheric pressure measurement given
 fn calculate_exact_pressure_offset(atmospheric_pressure: &f64, dew_point: &f64) -> f64 {
     if *atmospheric_pressure != AVG_ATMOSPHERIC_PRESSURE {
         let dew_point_full = dew_point

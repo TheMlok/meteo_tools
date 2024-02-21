@@ -3,6 +3,8 @@ use crate::{celsius_to_fahrenheit, fahrenheit_to_celsius, meteo_round};
 
 /// Calculates heat index based on Rothfusz regression equation for Fahrenheits.
 ///
+/// Returns degrees of Fahrenheit
+///
 /// # Examples
 ///
 /// ```
@@ -28,6 +30,8 @@ pub fn fahrenheit_heat_index(temperature: &f64, relative_humidity: &f64) -> f64 
 }
 
 /// Calculates heat index based on Rothfusz regression equation for Celsius.
+///
+/// Returns degrees of Fahrenheit
 ///
 /// # Examples
 ///

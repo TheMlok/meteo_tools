@@ -6,6 +6,8 @@ use crate::{
 
 /// Counts humidex for Celsius from given values. Uses common dew point algorithm.
 ///
+/// Returns degrees of Celsius
+///
 /// # Examples
 ///
 /// ```
@@ -25,6 +27,9 @@ pub fn common_celsius_humidex(temperature: &f64, relative_humidity: &f64) -> f64
 
 /// Counts humidex for Celsius from given values. Uses Celsius with given atmospheric pressure correction in hPa.
 /// Needs atmospheric pressure measurement in hPa in f64.
+///
+/// Returns degrees of Celsius
+///
 /// # Examples
 ///
 /// ```
@@ -49,6 +54,8 @@ pub fn celsius_humidex(
 
 /// Counts humidex for Fahrenheit from given values. Uses common dew point algorithm.
 ///
+/// Returns degrees of Fahrenheit
+///
 /// # Examples
 ///
 /// ```
@@ -67,6 +74,8 @@ pub fn common_fahrenheit_humidex(temperature: &f64, relative_humidity: &f64) -> 
 }
 
 /// Counts humidex for Fahrenheit from given values. Uses Fahrenheit with given atmospheric pressure correction in hPa.
+///
+/// Returns degrees of Fahrenheit
 ///
 /// # Examples
 ///

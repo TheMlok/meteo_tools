@@ -1,9 +1,9 @@
 use crate::constants::constants::AVG_ATMOSPHERIC_PRESSURE;
 use crate::{fahrenheit_to_celsius, meteo_round, saturation_vapor_pressure};
 
-// TODO change this AVG_ATMOSPHERIC_PRESSURE with attribute to create other than common
-
 /// Calculates mixing ratio using Magnus-Tetens formula using Celsius with common atmospheric pressure using constant.
+///
+/// Returns g/kg
 ///
 /// # Examples
 ///
@@ -26,6 +26,8 @@ pub fn common_celsius_mixing_ratio(temperature: &f64, relative_humidity: &f64) -
 }
 
 /// Calculates mixing ratio using Magnus-Tetens formula using Celsius with precise atm. pressure given.
+///
+/// Returns g/kg
 ///
 /// # Examples
 ///
@@ -54,6 +56,8 @@ pub fn celsius_mixing_ratio(
 
 /// Calculates mixing ratio using Magnus-Tetens formula using Celsius with common atmospheric pressure using constant.
 ///
+/// Returns g/kg
+///
 /// # Examples
 ///
 /// ```
@@ -72,6 +76,8 @@ pub fn common_fahrenheit_mixing_ratio(temperature: &f64, relative_humidity: &f64
 }
 
 /// Calculates mixing ratio using Magnus-Tetens formula using Celsius with with precise atm. pressure given.
+///
+/// Returns g/kg
 ///
 /// # Examples
 ///

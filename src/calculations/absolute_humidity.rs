@@ -3,6 +3,8 @@ use crate::{fahrenheit_to_celsius, meteo_round, saturation_vapor_pressure};
 
 /// Calculates absolute humidity using Magnus-Tetens formula using Celsius with common atmospheric pressure using constant.
 ///
+/// Returns g/m³
+///
 /// # Examples
 ///
 /// ```
@@ -31,6 +33,8 @@ pub fn celsius_absolute_humidity(temperature: &f64, relative_humidity: &f64) -> 
 }
 
 /// Calculates absolute humidity using Magnus-Tetens formula using Fahrenheit with common atmospheric pressure using constant.
+///
+/// Returns g/m³
 ///
 /// # Examples
 ///
