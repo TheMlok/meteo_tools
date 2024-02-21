@@ -26,3 +26,32 @@ Also, I use resolution prefix `common_` on algorithms using common constants (ex
 when you do not have atmospheric pressure measurements. Functions without `common_` needs exact measurements.
 
 I created this crate for my API to personal meteo project to count values from measured data sent from Raspberry PIs and Arduinos.# meteo_tools
+
+## Example of usage
+
+It is simple and fun, let's enjoy :).
+
+```rust
+use meteo_tools::common_celsius_dew_point;
+
+fn main() {
+    let temperature = 22.5;
+    let relative_humidity = 62.4;
+    
+    // returns dew point in f64
+    let dew_point = common_celsius_dew_point(&temperature, &humidity);
+}
+```
+
+Or converting degrees units.
+
+```rust 
+use meteo_tools::celsius_to_fahrenheit;
+
+fn main() {
+    let celsius_temperature = 22.5;
+    
+    // Converts units to another scale
+    let fahrenheit_temperature = celsius_to_fahrenheit(&celsius_temperature);
+}
+```
