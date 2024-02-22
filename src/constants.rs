@@ -21,4 +21,7 @@ pub mod constants {
     //pub const VOLUME_VAPOR_STD: f64 = 216.7; // specific volume of water vapor at standard temperature and pressure
     pub const GAS_CONSTANT: f64 = 8.314; // J/(mol·K)
     pub const MOLAR_MASS_WATER: f64 = 0.0180153; // kg/mol
+    pub const MMHG_CONVERSION: f64 = 0.750062;
+    pub const INHG_CONVERSION: f64 = 33.8639;
+    pub const METRIC_SPEED_CONVERSION: f64 = 3.6;
 }

@@ -5,12 +5,20 @@ atmospheric pressure.
 
 ## Features
 
-* Conversions between C, F, K degrees
+### Calculations
+
 * Dew point
 * Heat index
 * Humidex
 * Mixing ratio
 * Absolute humidity
+
+### Conversions
+* Between Celsius, Fahrenheit and Kelvin
+* Between hPa to mmHg and inHg
+* Wind speed km/h, m/s
+
+Conversions are interchangeably, aka from Celsius to Fahrenheit and vice versa.
 
 More will be coming soon. See the documentation.
 

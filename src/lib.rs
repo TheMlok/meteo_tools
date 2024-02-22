@@ -40,17 +40,24 @@ pub use self::calculations::absolute_humidity::celsius_absolute_humidity;
 pub use self::calculations::absolute_humidity::fahrenheit_absolute_humidity;
 
 // Conversions
+// temperature
 pub use self::conversions::temperature::celsius_to_fahrenheit;
 pub use self::conversions::temperature::celsius_to_kelvin;
 pub use self::conversions::temperature::fahrenheit_to_celsius;
 pub use self::conversions::temperature::fahrenheit_to_kelvin;
 pub use self::conversions::temperature::kelvin_to_celsius;
 pub use self::conversions::temperature::kelvin_to_fahrenheit;
+// pressure
+pub use self::conversions::pressure::hpa_to_inhg;
+pub use self::conversions::pressure::hpa_to_mmhg;
+pub use self::conversions::pressure::inhg_to_hpa;
+pub use self::conversions::pressure::mmhg_to_hpa;
+// speed
+pub use self::conversions::wind_speed::kmph_to_mps;
+pub use self::conversions::wind_speed::mps_to_kmph;
 
 // TODO: Specific relative_humidity, Vapor pressure, Relative saturation
 // TODO: heat index variants: Steadman's Apparent Temperature, Australian Apparent Temperature, New Zealand Apparent Temperature
-// TODO: Kelvin to Fahr vice versa
-// TODO: Conversions of pressure values
 // TODO: add accessivle constants for different measurements and values
 
 /// Rounds given value to 4 decimal places

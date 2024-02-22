@@ -1,6 +1,6 @@
 [package]
 name = "meteo_tools"
-version = "1.0.0"
+version = "1.1.0"
 edition = "2021"
 description = "A crate for counting and converting meteorological units."
 keywords = ["meteo", "celsius", "conversions", "weather", "units"]
