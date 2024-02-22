@@ -51,6 +51,7 @@ pub use self::conversions::temperature::kelvin_to_fahrenheit;
 // TODO: heat index variants: Steadman's Apparent Temperature, Australian Apparent Temperature, New Zealand Apparent Temperature
 // TODO: Kelvin to Fahr vice versa
 // TODO: Conversions of pressure values
+// TODO: add accessivle constants for different measurements and values
 
 /// Rounds given value to 4 decimal places
 fn meteo_round(number: &f64) -> f64 {
