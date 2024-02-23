@@ -59,6 +59,7 @@ pub use self::conversions::wind_speed::kmph_to_mps;
 pub use self::conversions::wind_speed::knots_to_kmph;
 pub use self::conversions::wind_speed::mph_to_kmph;
 pub use self::conversions::wind_speed::mph_to_knots;
+pub use self::conversions::wind_speed::mph_to_mps;
 pub use self::conversions::wind_speed::mps_to_kmph;
 pub use self::conversions::wind_speed::mps_to_mph;
 
