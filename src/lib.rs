@@ -53,8 +53,14 @@ pub use self::conversions::pressure::hpa_to_mmhg;
 pub use self::conversions::pressure::inhg_to_hpa;
 pub use self::conversions::pressure::mmhg_to_hpa;
 // speed
+pub use self::conversions::wind_speed::kmph_to_knots;
+pub use self::conversions::wind_speed::kmph_to_mph;
 pub use self::conversions::wind_speed::kmph_to_mps;
+pub use self::conversions::wind_speed::knots_to_kmph;
+pub use self::conversions::wind_speed::mph_to_kmph;
+pub use self::conversions::wind_speed::mph_to_knots;
 pub use self::conversions::wind_speed::mps_to_kmph;
+pub use self::conversions::wind_speed::mps_to_mph;
 
 // TODO: Specific relative_humidity, Vapor pressure, Relative saturation
 // TODO: heat index variants: Steadman's Apparent Temperature, Australian Apparent Temperature, New Zealand Apparent Temperature

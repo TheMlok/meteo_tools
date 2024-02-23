@@ -24,4 +24,7 @@ pub mod constants {
     pub const MMHG_CONVERSION: f64 = 0.750062;
     pub const INHG_CONVERSION: f64 = 33.8639;
     pub const METRIC_SPEED_CONVERSION: f64 = 3.6;
+    pub const IMPERIAL_SPEED_CONVERSION: f64 = 0.621371;
+    pub const KNOTS_METRIC_SPEED_CONVERSION: f64 = 1.852;
+    pub const KNOTS_IMPERIAL_SPEED_CONVERSION: f64 = 1.15078;
 }
