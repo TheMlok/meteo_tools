@@ -1,7 +1,7 @@
 # meteo_tools
 
 A crate for counting and converting meteorological units. Accepts temperature in C or F, relative humidity and optionally
-atmospheric pressure.
+atmospheric pressure, converting wind speeds and calculating heat points, humidex, heat index, etc.
 
 ## Features
 
@@ -16,7 +16,7 @@ atmospheric pressure.
 ### Conversions
 * Between Celsius, Fahrenheit and Kelvin
 * Between hPa to mmHg and inHg
-* Wind speed km/h, m/s
+* Wind speed km/h, m/s, knots
 
 Conversions are interchangeably, aka from Celsius to Fahrenheit and vice versa.
 
