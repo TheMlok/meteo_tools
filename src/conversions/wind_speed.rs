@@ -107,7 +107,39 @@ pub fn mps_to_mph(speed_mps: &f64) -> f64 {
     meteo_round(&mph)
 }
 
-// TODO m/s to knots, knots to m/s
+/// Converts speed from Meters per second to Knots per hour.
+///
+/// # Examples
+///
+/// ```
+/// let speed = 10.0;
+/// let result = 19.4384;
+///
+/// let kts = meteo_tools::mps_to_knots(&speed);
+///
+/// assert_eq!(kts, result);
+/// ```
+pub fn mps_to_knots(speed_mps: &f64) -> f64 {
+    let kmph = mps_to_kmph(speed_mps);
+    kmph_to_knots(&kmph)
+}
+
+/// Converts speed from Knots per hour to Meters per second.
+///
+/// # Examples
+///
+/// ```
+/// let speed = 19.4384;
+/// let result = 10.0;
+///
+/// let kts = meteo_tools::knots_to_mps(&speed);
+///
+/// assert_eq!(kts, result);
+/// ```
+pub fn knots_to_mps(speed_knots: &f64) -> f64 {
+    let kmph = knots_to_kmph(speed_knots);
+    kmph_to_mps(&kmph)
+}
 
 /// Converts speed from Kilometers per hour to Knots per hour.
 ///
